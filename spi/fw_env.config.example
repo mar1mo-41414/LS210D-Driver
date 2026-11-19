@@ -1,0 +1,6 @@
+# U-Boot 環境変数 (u-boot-env パーティション) 用 fw_env.config の例。
+# /etc/fw_env.config にコピーすると fw_printenv が使える。
+#   デバイス名   オフセット  環境サイズ  フラッシュセクタサイズ  セクタ数
+# 注意: DT のパーティションは read-only のため fw_setenv は使えない。
+# 書き込みが必要な場合は dts/ の手順で u-boot-env の read-only を外すこと。
+/dev/mtd1  0x0000  0x10000  0x10000

@@ -1,0 +1,17 @@
+[Unit]
+Description=LS210D power switch / FUNCTION button monitor
+After=multi-user.target
+ConditionPathExists=/sys/class/input
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/sbin/ls210d-gpiod.py
+Restart=on-failure
+RestartSec=2
+# 対象機では systemd-journald が inactive で journal にログが残らないため、
+# ログはファイルにも出す (tail -f /var/log/ls210d-gpiod.log で見られる)
+StandardOutput=append:/var/log/ls210d-gpiod.log
+StandardError=append:/var/log/ls210d-gpiod.log
+
+[Install]
+WantedBy=multi-user.target

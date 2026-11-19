@@ -1,0 +1,7 @@
+#!/bin/sh
+# FUNCTION ボタン短押しフックの例。
+# /etc/ls210d-driver/function-hook.sh にコピーして実行権限を付けると有効になる。
+# 公式 FW では DirectCopy (USB メモリ→NAS コピー) が割り当てられていた。
+logger -t ls210d-gpiod "FUNCTION button pressed"
+# 例: USB ストレージの自動コピーや、任意の保守スクリプト呼び出しをここに書く。
+exit 0

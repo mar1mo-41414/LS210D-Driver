@@ -1,0 +1,12 @@
+# ls210d-gpiod 設定例。/etc/ls210d-driver/ls210d-gpiod.conf に置く。
+# 書かれていない項目はデーモン内蔵の既定値が使われる。
+[ls210d-gpiod]
+# device_name = gpio-keys
+# power_code = 1
+# function_code = 357
+# power_off_grace_sec = 3
+# function_long_press_sec = 2
+# poweroff_command = systemctl poweroff
+# function_hook = /etc/ls210d-driver/function-hook.sh
+# function_hook_long = /etc/ls210d-driver/function-hook-long.sh
+# dry_run = 0

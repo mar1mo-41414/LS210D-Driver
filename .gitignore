@@ -1,0 +1,6 @@
+/SampleData/
+/work-kernel/
+/work-debian/
+*.bin
+*.buffalo
+__pycache__/
